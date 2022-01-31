@@ -32,6 +32,7 @@ def main():
         end_index = result.find("revision_id") - 19
         result = result[start_index:end_index]
         # Remove formatting codes
+        result = result.replace("\&quot", "")
         result = result.replace("[ch]", "")
         result = result.replace("[/ch]", "")
         result = result.replace("\\r\\n", "\r\n")
